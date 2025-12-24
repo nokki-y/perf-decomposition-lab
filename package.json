@@ -1,0 +1,24 @@
+{
+  "name": "typescript-execution-layers",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Break down performance differences across TypeScript -> JavaScript -> V8 -> CPU(disassembly) layers.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "clean": "node scripts/clean.mjs",
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/js/tests/**/*.test.js",
+    "bench": "npm run build && node dist/js/cli.js bench --pair all --variant both --format table --write-artifacts",
+    "artifacts:js": "npm run build",
+    "artifacts:v8": "npm run build && node scripts/run-v8.mjs",
+    "artifacts:all": "npm run clean && npm run artifacts:js && npm run artifacts:v8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.0.0"
+  }
+}
+
+
