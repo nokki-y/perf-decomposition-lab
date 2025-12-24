@@ -1,4 +1,4 @@
-# typescript-execution-layers
+# perf-decomposition-lab
 
 同じ処理結果を返す TypeScript 実装でも、**生成された JavaScript の形**や **V8 の最適化状態（IC/hidden class / opt・deopt）**、さらに **最適化後コードの（disassemble 相当の）出力**が異なり、その差が **wall-clock time / CPU time / GC / JIT 状態**にどう現れるかを「分解」して理解するための検証リポジトリです。
 
@@ -117,7 +117,7 @@
 ### セットアップ（npm に統一）
 
 ```bash
-cd /Users/yoshihide-unoki/dev/typescript-execution-layers
+cd /Users/yoshihide-unoki/dev/perf-decomposition-lab
 npm install
 ```
 

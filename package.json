@@ -1,5 +1,5 @@
 {
-  "name": "typescript-execution-layers",
+  "name": "perf-decomposition-lab",
   "private": true,
   "version": "0.1.0",
   "description": "Break down performance differences across TypeScript -> JavaScript -> V8 -> CPU(disassembly) layers.",
